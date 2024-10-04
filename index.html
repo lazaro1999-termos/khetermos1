@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KheTermos - Termos Stanley</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background-color: #34495E;
+        }
+
+        nav a {
+            color: white;
+            padding: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-image: url('https://example.com/hero-image.jpg'); /* Reemplaza con una imagen real */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .cta-button {
+            background-color: #E74C3C;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Sección dividida en tres */
+        .three-column {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            background-color: #ECF0F1;
+        }
+
+        .three-column > div {
+            flex: 1;
+            padding: 1rem;
+            min-width: 300px;
+        }
+
+        .three-column h2 {
+            margin-bottom: 1rem;
+        }
+
+        .three-column video {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Botón de ir hacia arriba */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #E74C3C;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .three-column {
+                flex-direction: column;
+            }
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KheTermos - Termos Stanley</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#info">Información</a>
+        <a href="#products">Productos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Termos Stanley: Hidrátate con Estilo</h1>
+            <a href="#info" class="cta-button">Más información</a>
+        </div>
+    </section>
+
+    <!-- Sección dividida en 3 -->
+    <section class="three-column" id="info">
+        <div>
+            <h2>Beneficios de los Termos Stanley</h2>
+            <p>Conserva tus bebidas frías por hasta 24 horas y calientes por 12 horas. Ideal para todas tus actividades, ya sea en la oficina o en aventuras al aire libre.</p>
+        </div>
+        <div>
+            <h2>Video de Uso</h2>
+            <video controls>
+                <source src="https://example.com/termo-video.mp4" type="video/mp4"> <!-- Reemplaza con un video real -->
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+        <div>
+            <h2>Termos Sostenibles</h2>
+            <p>Los termos Stanley ayudan a reducir el uso de botellas de plástico, promoviendo la sostenibilidad y el cuidado del medio ambiente con productos duraderos y reutilizables.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Contacto: info@khetermos.com</p>
+        <p>Síguenos en redes sociales: @KheTermos</p>
+    </footer>
+
+    <!-- Botón de Ir hacia arriba -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">▲ Ir hacia arriba</button>
+
+    <script>
+        // Mostrar el botón cuando el usuario se desplaza hacia abajo
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+
+        // Función para volver hacia arriba
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
